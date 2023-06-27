@@ -8,7 +8,6 @@ class Square:
         """intialize square
         Args:
             size(int): the size of square"""
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif(size < 0):
