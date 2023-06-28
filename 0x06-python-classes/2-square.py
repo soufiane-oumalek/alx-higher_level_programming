@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Square:
     """declare class Square"""
     def init(self, size=0):
