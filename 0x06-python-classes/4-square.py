@@ -3,7 +3,7 @@
 
 
 class Square:
-    """declare class square"""
+    """declare class"""
 
     def __init__(self, size=0):
         """intialize square
