@@ -68,5 +68,5 @@ class Rectangle:
         return (rect_angle)
 
     def __del__(self):
-        """Print the message Bye rectangle... (... being 3 dots not ellipsis)"""
+        """Print the message Bye rectangle(... being 3 dots not ellipsis)"""
         print("Bye rectangle...")
