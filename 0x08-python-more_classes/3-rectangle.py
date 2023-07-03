@@ -49,15 +49,14 @@ class Rectangle:
         """the area of the rectangle"""
         return (self.__width * self.__height)
 
-    def __str___(self):
+    def __str__(self):
         """print the rectangle with the character"""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect_angle = []
         for i in range(self.__height):
-            [rect_angle.append('#') for j in range(self.__width)]
-            if i < self.__height - 1:
+            [rect_angle.append("#") for j in range(self.__width)]
+            if i != self.__height - 1:
                 rect_angle.append("\n")
-        rescstr = "".join(rest_angle)
-        return ("".join(rect_angle))
+        return "".join(rect_angle)
