@@ -54,18 +54,18 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rect_angle = []
+        r_agl = []
         for i in range(self.__height):
-            [rect_angle.append("#") for j in range(self.__width)]
+            [r_agl.append("#") for j in range(self.__width)]
             if i != self.__height - 1:
-                rect_angle.append("\n")
-        return "".join(rect_angle)
+                r_agl.append("\n")
+        return "".join(r_agl)
 
     def __repr__(self):
         """string of the rectangle"""
-        rect_angle = "Rectangle(" + str(self.__width)
-        rect_angle += ", " + str(self.__height) + ")"
-        return (rect_angle)
+        r_agl = "Rectangle(" + str(self.__width)
+        r_agl += ", " + str(self.__height) + ")"
+        return (r_agl)
 
     def __del__(self):
         """Print the message Bye rectangle(... being 3 dots not ellipsis)"""
