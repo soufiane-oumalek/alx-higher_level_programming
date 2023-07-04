@@ -4,7 +4,9 @@
 
 class Rectangle:
     """initialize Rectangle"""
-
+    __width = None
+    __height = None
+    print_symbol = "#"
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -52,6 +54,20 @@ class Rectangle:
         """the area of the rectangle"""
         return (self.__width * self.__height)
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """rectangle with area
+        args:
+            rect_1 fisrt rectangle
+            rect_2 second rectangle """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise ValueError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
     def __str__(self):
         """print the rectangle with the character"""
         if self.__width == 0 or self.__height == 0:
@@ -59,7 +75,7 @@ class Rectangle:
 
         r_agl = []
         for i in range(self.__height):
-            [r_agl.append("#") for j in range(self.__width)]
+            [r_agl.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 r_agl.append("\n")
         return "".join(r_agl)
@@ -67,7 +83,7 @@ class Rectangle:
     def __repr__(self):
         """string of the rectangle"""
         r_agl = "Rectangle(" + str(self.__width)
-        r_agle += ", " + str(self.__height) + ")"
+        r_agl += ", " + str(self.__height) + ")"
         return (r_agl)
 
     def __del__(self):
