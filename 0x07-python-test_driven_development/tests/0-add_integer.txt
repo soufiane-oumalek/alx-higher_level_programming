@@ -1,11 +1,11 @@
 ---------------------------
 How to Use 0-add_integer.py
----------------------------
+--------------------------
 
-Defines an integer addition function ``add_integer(a, b=98)``.
+defines an integer addition function ``add_integer(a, b=98)``.
 
 Usage
-=====
+-----
 
 ::
 
@@ -51,7 +51,8 @@ The second argument is optional - by default, it is 98.
     >>> add_integer(2)
     100
 
-
+Non-Numbers
+-----------
 
 ``add_integer()`` expects that both arguments are either integers or floats.
 If either argument is a non-integer and non-float, a TypeError is raised:
@@ -117,9 +118,3 @@ And again with NaN numbers.
     >>> add_integer(2, float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to inte
-
-------------------------------------------------------------------------------------------
-
-
-    end of tests
-    ------------
