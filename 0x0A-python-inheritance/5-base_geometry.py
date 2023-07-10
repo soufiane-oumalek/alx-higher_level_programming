@@ -3,5 +3,5 @@
 
 
 class BaseGeometry:
-    """initialison class"""
+    """initialize class"""
     pass
