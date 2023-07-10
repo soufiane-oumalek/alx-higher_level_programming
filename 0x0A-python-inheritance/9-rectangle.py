@@ -22,4 +22,4 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        return str("[Rectangle] {}/{}".format(self.__width, self.))
+        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
