@@ -21,5 +21,5 @@ class Student:
         """
         if (type(attrs) == list and
                 all(type(element) == str for element in attrs)):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+            return {ky: getattr(self, ky) for ky in attrs if hasattr(self, ky)}
         return self.__dict__
