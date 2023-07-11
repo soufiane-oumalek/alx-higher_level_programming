@@ -32,7 +32,7 @@ class Student:
     def reload_from_json(self, json):
         """retrieves a dictionary representation of a Student"""
 
-        for k in json:
+        for key in json:
             try:
                 setattr(self, key, json[key])
             except FileNotFoundError:
