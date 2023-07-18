@@ -41,7 +41,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """that returns the JSON string
+        """that returns the JSON strin
         representation of list_dictionaries"""
         if not json_string:
             return []
@@ -51,7 +51,7 @@ class Base:
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
             new_dic = cls(10, 10)
-        else:
-            new_dic = (10)
+        elif cls.__name__ == "Square":
+            new_dic = cls(10)
         new_dic.update(**dictionary)
         return new_dic
