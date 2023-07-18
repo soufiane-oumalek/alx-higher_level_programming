@@ -41,7 +41,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """that returns the JSON string 
+        """that returns the JSON string
         representation of list_dictionaries"""
         if not json_string:
             return []
