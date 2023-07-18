@@ -55,4 +55,3 @@ class Base:
             new_dic = (10)
         new_dic.update(**dictionary)
         return new_dic
-    
