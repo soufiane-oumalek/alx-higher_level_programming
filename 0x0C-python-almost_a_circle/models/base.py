@@ -50,8 +50,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
-            new_dic = cls(10, 10)
+            my_dummy = cls(10, 10)
         elif cls.__name__ == "Square":
-            new_dic = cls(10)
-        new_dic.update(**dictionary)
-        return new_dic
+            my_dummy = cls(10)
+        my_dummy.update(**dictionary)
+        return my_dummy
