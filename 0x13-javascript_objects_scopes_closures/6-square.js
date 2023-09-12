@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const SquareBase = require('./5=square');
+const SquareBase = require('./5-square');
 
 class Square extends SquareBase {
-  charPrint (c) {
-    if (!c) c = 'X';
+  charPrint (chr) {
+    if (!chr) chr = 'X';
     for (let i = 0; i < this.height; i++) {
-      console.log(c.repeat(this.width));
+      console.log(chr.repeat(this.width));
     }
   }
 }
