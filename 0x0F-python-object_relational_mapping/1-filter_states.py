@@ -8,7 +8,8 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3],
                          port=3306)
     curs = db.cursor()
-    curs.execute("SELECT * FROM states")
+    curs.execute("SELECT * FROM states \
+      WHERE name LIKE 'N%' ORDEDBY states.id ASC")
     r = curs.fetchall()
     for row in r:
         print(row)
