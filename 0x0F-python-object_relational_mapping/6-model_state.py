@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""file that contains the class definition
-of a State and an instance"""
+"""Start link class to table in database
+"""
 
 import sys
 from model_state import Base, State
