@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """relationshipstate"""
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
     """ class class """
     __tablename__ = 'states'
 
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, primary_key=True, unique=True, nullable=False)
     name = Column(String(128), nullable=False)
     cities = relationship('City', cascade="all, delete", backref='state')
