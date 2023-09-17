@@ -8,7 +8,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3],
                          port=3306)
     curs = db.cursor()
-    curs.execute("SELECT * FROM cities ORDED BY cities.id ASC")
+    curs.execute("SELECT cities.id, cities.name, states.name\
+                FROM cities LEFT JOIN states\
+                ON states.id = cities.state_id\
+                ORDER BY cities.id ASC")
     r = curs.fetchall()
     for row in r:
         print(row)
