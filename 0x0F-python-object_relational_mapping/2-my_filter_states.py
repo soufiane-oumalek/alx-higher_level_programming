@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          port=3306)
     curs = db.cursor()
     curs.execute("SELECT * FROM states \
-      WHERE name LIKE '{}' ORDEDBY states.id ASC".format(sys.argv[4]))
+      WHERE name LIKE '{}' ORDER BY id ASC".format(sys.argv[4]))
     r = curs.fetchall()
     for row in r:
         print(row)
