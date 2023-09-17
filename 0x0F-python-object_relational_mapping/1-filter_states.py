@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          port=3306)
     curs = db.cursor()
     curs.execute("SELECT * FROM states \
-      WHERE name LIKE BINARY 'N%' ORDEDBY states.id ASC")
+      WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
     r = curs.fetchall()
     for row in r:
         print(row)
