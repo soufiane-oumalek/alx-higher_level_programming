@@ -10,7 +10,7 @@ if __name__ == "__main__":
     curs = db.cursor()
     curs.execute("SELECT cities.name FROM \
       cities LEFT JOIN states ON states.id = cities.state_id \
-      states.name LIKE BINARY %s = ORDER BY cities.id ASC", (sys.argv[4],))
+      states.name LIKE BINARY %s ORDER BY cities.id ASC", (sys.argv[4],))
     r = curs.fetchall()
     t = list(row[0] for row in r)
     print(*t, sep=", ")
