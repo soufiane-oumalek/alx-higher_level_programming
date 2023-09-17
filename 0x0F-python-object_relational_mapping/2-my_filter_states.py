@@ -14,5 +14,3 @@ if __name__ == "__main__":
     r = curs.fetchall()
     for row in r:
         print(row)
-    curs.close()
-    db.close()
