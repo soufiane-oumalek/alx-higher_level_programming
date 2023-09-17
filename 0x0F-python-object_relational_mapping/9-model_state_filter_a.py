@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     ses = Session(engine)
-    for state in ses.query(State)\
-      .filter(State.name.like('%a%')).order_by(State.id):
+    objs = ses.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    for state in objs:
         print("{}: {}".format(state.id, state.name))
     ses.close()
