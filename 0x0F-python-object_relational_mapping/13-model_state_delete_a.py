@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """deletes all State objects with a name containing the
 letter a from the database hbtn_0e_6_usa"""
+
 if __name__ == "__main__":
 
     import sys
@@ -18,4 +19,3 @@ if __name__ == "__main__":
         ses.delete(state)
     ses.commit()
     ses.close()
-
