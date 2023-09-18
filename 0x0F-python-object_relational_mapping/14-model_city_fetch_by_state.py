@@ -17,5 +17,5 @@ if __name__ == "__main__":
     obj = ses.query(City, State)\
         .join(State, State.id == City.state_id).all()
     if obj:
-        for state, city in obj:
+        for city, state in obj:
             print("{}: ({}) {}".format(state.name, city.id, city.name))
