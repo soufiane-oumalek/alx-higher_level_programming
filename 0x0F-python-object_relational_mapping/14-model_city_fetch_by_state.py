@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""print cities name"""
+"""print all cities name"""
+
 
 if __name__ == "__main__":
 
