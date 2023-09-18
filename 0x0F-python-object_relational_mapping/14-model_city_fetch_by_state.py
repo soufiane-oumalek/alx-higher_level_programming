@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """print cities name"""
+
 if __name__ == "__main__":
 
     import sys
@@ -14,8 +15,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     ses = Session()
-    obj = ses.query(City, State)\
+    ob = ses.query(City, State)\
         .join(State, State.id == City.state_id).all()
-    if obj:
-        for city, state in obj:
+    if ob:
+        for city, state in ob:
             print("{}: ({}) {}".format(state.name, city.id, city.name))
