@@ -5,8 +5,7 @@
 import requests
 
 if __name__ == "__main__":
-    req = requests.get('https://intranet.hbtn.io/status')
-    c = req.content.decode(r.encoding)
+    result = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
-    print(f"\t- type: {type(c.text)}")
-    print(f"\t- content: {c.text}")
+    print(f"\t- type: {type(result.text)}")
+    print(f"\t- content: {result.text}")
