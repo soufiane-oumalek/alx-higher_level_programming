@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const axios = require('axios');
+const axios = require('request');
 const url = process.argv[2];
 
-axios.get(url)
+request.get(url)
   .then(response => {
     const data = response.data;
     const results = {};
