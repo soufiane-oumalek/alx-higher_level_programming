@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const axios = require('request');
+const request = require('request');
 const url = process.argv[2];
 
 request.get(url)
