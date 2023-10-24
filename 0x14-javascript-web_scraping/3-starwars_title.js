@@ -1,12 +1,16 @@
 #!/usr/bin/node
 
 const request = require('request');
-const id = process.argv[2];
+const episodeNum = process.argv[2];
+const URL = 'https://swapi-api.hbtn.io/api/films/';
 
-request.get(`https://swapi-api.alx-tools.com/api/films/${id}`)
-  .then(response => {
-    console.log(response.data.title);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+request(URL + episodeNum, function (err, response, body) {
+  if (err) {
+    console.log(err);
+  } else if (response.statusCode === 200) {
+    const responseJSON = JSON.parse(body);
+    console.log(responseJSON.title);
+  } else {
+    console.log('Error code: ' + response.statusCode);
+  }
+});
